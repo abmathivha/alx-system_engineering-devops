@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Read the input from the command line
+scriptname=$1
+
+# Step 0: change to executable
+chmod u+x $scriptname
+
+# Step 1: Git add
+git add .
+
+# Step 2: Git commit
+commit_message="Adding $scriptname script"
+git commit -m "$commit_message"
+
+# Step 3: Git push
+git push
